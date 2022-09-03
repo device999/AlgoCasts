@@ -12,6 +12,22 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-function midpoint(list) {}
+
+function midpoint(list) {
+    var lastRemoved = false;
+    var firstRemoved = false;
+    while(list.getFirst().data!==list.getLast().data){
+        if(!lastRemoved){
+            list.removeLast();
+            lastRemoved = true;
+            firstRemoved = false;
+        }else if(!firstRemoved){
+            list.removeFirst();
+            firstRemoved = true;
+            lastRemoved = false;
+        }
+    }
+    return list.getFirst();
+}
 
 module.exports = midpoint;
