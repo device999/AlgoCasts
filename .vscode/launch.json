@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\exercises\\levelwidth\\index.js"
+            "program": "${workspaceFolder}\\exercises\\bst\\index.js"
         }
     ]
 }
